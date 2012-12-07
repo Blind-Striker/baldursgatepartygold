@@ -1,0 +1,46 @@
+﻿<Window x:Class="MvpVmSample.Presentation.PartyGoldEditor.Wpf.PartyGoldEditorView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:vm="clr-namespace:MvpVmSample.Presentation.PartyGoldEditor.Core.ViewModels;assembly=MvpVmSample.Presentation.PartyGoldEditor.Core"
+        mc:Ignorable="d" d:DataContext="{d:DesignInstance vm:PartyGoldEditorViewModel}"
+        Title="Party Gold Editor" Height="170" Width="290" Icon="{StaticResource BaldurImageSource}">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" Height="24">
+            <MenuItem Header="_Settings" Icon="{StaticResource SettingImage}" FontSize="14" >
+                <MenuItem Command="{Binding SelectSaveFolder}" Header="Select Save Folder" Icon="{StaticResource SavedFolder}" FontSize="14"/>
+                <MenuItem Command="{Binding SelectSaveGame}" Header="Select Save Game" Icon="{StaticResource SaveGame}" FontSize="14" />
+            </MenuItem>
+            <MenuItem Header="_Help" Icon="{StaticResource HelpImage}" FontSize="14">
+                <MenuItem Command="{Binding About}" Header="About" Icon="{StaticResource AboutImage}" FontSize="14"/>
+            </MenuItem>
+        </Menu>
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar>
+                <Button Command="{Binding Save}" Content="{StaticResource SaveImage}"></Button>
+            </ToolBar>
+        </ToolBarTray>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem Content="{Binding StatusText}" />
+        </StatusBar>
+
+        <Grid  Margin="0,2,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="94"/>
+                <ColumnDefinition Width="14" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="6*" />
+            </Grid.RowDefinitions>
+
+            <Label Content="Current Party Gold" Grid.ColumnSpan="2" />
+            <TextBox Text="{Binding PartyGold}" x:Name="txtPartyGold" Grid.Column="2" MaxLength="100" HorizontalAlignment="Stretch" Margin="3,4,3,0" IsReadOnly="True" />
+            <Label Content="New Party Gold" Grid.Row="1" Grid.ColumnSpan="2" />
+            <TextBox Text="{Binding NewPartyGold}" x:Name="txtNewPartyGold" Grid.Column="2" Grid.Row="1" MaxLength="100" HorizontalAlignment="Stretch" Margin="3,4,3,0" />
+        </Grid>
+    </DockPanel>
+</Window>

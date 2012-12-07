@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1FDABCEE-0524-4AFF-96B2-37C3C00D9041}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MvpVmSample.Presentation.PartyGoldEditor.WindowsForms</RootNamespace>
+    <AssemblyName>PartyGoldEditor</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Images\BGT.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle.Core.3.1.0\lib\net40-client\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=3.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Windsor.3.1.0\lib\net40\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\BindableToolStripStatusLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PartyGoldEditorView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartyGoldEditorView.Designer.cs">
+      <DependentUpon>PartyGoldEditorView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectSaveFolderView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectSaveFolderView.Designer.cs">
+      <DependentUpon>SelectSaveFolderView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PartyGoldEditorView.resx">
+      <DependentUpon>PartyGoldEditorView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectSaveFolderView.resx">
+      <DependentUpon>SelectSaveFolderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\MvpVmSample.Presentation.PartyGoldEditor.Core.ViewModels.PartyGoldEditorViewModel.datasource" />
+    <None Include="Properties\DataSources\MvpVmSample.Presentation.PartyGoldEditor.Core.ViewModels.SelectSaveFolderViewModel.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bootstrapper\Bootstrapper.csproj">
+      <Project>{FFAC2D40-7DEC-478D-8CD3-C8C73F08DBDD}</Project>
+      <Name>Bootstrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExternalProjects\WafWinFormsAdapter\WafWinFormsAdapter.csproj">
+      <Project>{D9BE887D-3D18-45F3-8252-AE4F62EF2A25}</Project>
+      <Name>WafWinFormsAdapter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExternalProjects\WpfApplicationFramework\WpfApplicationFramework.csproj">
+      <Project>{27B67DFE-0BF1-4435-B036-E4C083EAEA03}</Project>
+      <Name>WpfApplicationFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Foundation\Foundation.csproj">
+      <Project>{266B8812-CE90-496A-886C-946381FDA4D8}</Project>
+      <Name>Foundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PartyGoldEditor.Core\PartyGoldEditor.Core.csproj">
+      <Project>{3B1DB563-C037-4FCE-9BDB-736B8CDF80AE}</Project>
+      <Name>PartyGoldEditor.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Images\About.png" />
+    <Content Include="Resources\Images\BGT.ico" />
+    <Content Include="Resources\Images\Copy.png" />
+    <Content Include="Resources\Images\Cut.png" />
+    <Content Include="Resources\Images\Delete.png" />
+    <Content Include="Resources\Images\folder-saved-search.ico" />
+    <Content Include="Resources\Images\folder-saved-search.png" />
+    <Content Include="Resources\Images\help.png" />
+    <Content Include="Resources\Images\Paste.png" />
+    <Content Include="Resources\Images\Redo.png" />
+    <Content Include="Resources\Images\Setting.png" />
+    <Content Include="Resources\Images\sword.png" />
+    <Content Include="Resources\Images\Undo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="MvpVmSample">
+</Property><Property Name="Solution File" Value="G:\Projects\My\MvpVmSample\MvpVmSample.sln">
+</Property><Property Name="Date" Value="05 Aralık 2012 Çarşamba">
+</Property><Property Name="Time" Value="01:02:49">
+</Property></Properties><Event ErrorLevel="0" Project="WafWinFormsAdapter" Source="ExternalProjects\WafWinFormsAdapter\WafWinFormsAdapter.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="WafWinFormsAdapter" Source="ExternalProjects\WafWinFormsAdapter\WafWinFormsAdapter.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="WafWinFormsAdapter" Source="ExternalProjects\WafWinFormsAdapter\WafWinFormsAdapter.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

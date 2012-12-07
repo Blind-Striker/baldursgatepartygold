@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <BitmapSource x:Key="BaldurImageSource">Images/BGT.ico</BitmapSource>
+
+    <Image x:Key="SaveImage" x:Shared="False" Source="Images/Save.png" Height="16" Width="16"/>
+    <Image x:Key="SettingImage" x:Shared="False" Source="Images/Setting.png" Height="16" Width="16"/>
+    <Image x:Key="HelpImage" x:Shared="False" Source="Images/help.png" Height="16" Width="16"/>
+    <Image x:Key="AboutImage" x:Shared="False" Source="Images/About.png" Height="16" Width="16"/>
+    <Image x:Key="SavedFolder" x:Shared="False" Source="Images/folder-saved-search.png" Height="16" Width="16"/>
+    <Image x:Key="SaveGame" x:Shared="False" Source="Images/sword.png" Height="16" Width="16"/>
+
+</ResourceDictionary>
