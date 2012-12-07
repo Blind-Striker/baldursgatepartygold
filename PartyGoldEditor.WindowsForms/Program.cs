@@ -36,7 +36,7 @@ namespace MvpVmSample.Presentation.PartyGoldEditor.WindowsForms
             IPartyGoldEditorPresenter partyGoldEditorPresenter = presenterFactory.CreatePresenter<IPartyGoldEditorPresenter>();
 
             Application.Run(partyGoldEditorPresenter.View as Form);
-           // Application.Run(new SelectSaveFolderView());
+           //Application.Run(new SelectSaveFolderView());
         }
 
         private static void ConfigureContainer()

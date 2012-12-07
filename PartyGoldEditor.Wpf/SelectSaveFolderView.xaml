@@ -1,0 +1,26 @@
+﻿<Window x:Class="MvpVmSample.Presentation.PartyGoldEditor.Wpf.SelectSaveFolderView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:vm="clr-namespace:MvpVmSample.Presentation.PartyGoldEditor.Core.ViewModels;assembly=MvpVmSample.Presentation.PartyGoldEditor.Core"
+        mc:Ignorable="d" d:DataContext="{d:DesignInstance vm:SelectSaveFolderViewModel}"
+        Title="SelectSaveFolderView" Height="172" Width="475" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="SingleBorderWindow">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="2*" />
+            
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0" Grid.Row="0" Content="Select Save Folder" VerticalAlignment="Top" Margin="3,0,0,0"/>
+        <TextBox Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch" Margin="3,23,3,0" VerticalAlignment="Top" Text="{Binding SaveFolderPath}"/>
+        <TextBox Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch" Margin="3,50,0,3" VerticalAlignment="Stretch" TextWrapping="Wrap" AcceptsReturn="True" IsReadOnly="True" Text="{Binding Description}"/>
+        <Button Command="{Binding Select}" Grid.Column="1" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="23" Margin="3,22,3,0" Content="Select"/>
+        <Button Command="{Binding Cancel}" Grid.Column="1" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="23" Margin="3,50,3,0" Content="Cancel"/>
+        <Button Command="{Binding Browse}" Grid.Column="1" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="23" Margin="3,77,3,0" Content="Browse"/>
+        <Button Command="{Binding Search}" Grid.Column="1" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="23" Margin="3,105,3,0" Content="Search"/>
+    </Grid>
+</Window>
