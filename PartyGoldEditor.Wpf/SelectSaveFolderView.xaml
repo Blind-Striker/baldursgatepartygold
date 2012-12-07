@@ -5,7 +5,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             xmlns:vm="clr-namespace:MvpVmSample.Presentation.PartyGoldEditor.Core.ViewModels;assembly=MvpVmSample.Presentation.PartyGoldEditor.Core"
         mc:Ignorable="d" d:DataContext="{d:DesignInstance vm:SelectSaveFolderViewModel}"
-        Title="SelectSaveFolderView" Height="172" Width="475" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="SingleBorderWindow">
+        Title="SelectSaveFolderView" Height="172" Width="475" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="SingleBorderWindow" Icon="{StaticResource SelectFolderIco}">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5*" />
