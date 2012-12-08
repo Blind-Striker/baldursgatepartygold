@@ -5,6 +5,6 @@ namespace MvpVmSample.Core.Foundation
     public interface IHeaderRepository
     {
         Header GetHeader(string savePath);
-        void SaveHeader(string destinationPath, uint partyGold);
+        string SaveHeader(string destinationPath, uint partyGold);
     }
 }

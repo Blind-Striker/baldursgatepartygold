@@ -5,8 +5,8 @@ namespace MvpVmSample.Presentation.PartyGoldEditor.Core.ViewModels
 {
     public class PartyGoldEditorViewModel : BaseViewModel
     {
-        private int _partyGold;
-        private int _newPartyGold;
+        private uint _partyGold;
+        private uint _newPartyGold;
         private string _statusText;
         private string _selectSaveGameName;
 
@@ -15,7 +15,7 @@ namespace MvpVmSample.Presentation.PartyGoldEditor.Core.ViewModels
         private ICommand _about;
         private ICommand _save;
 
-        public int PartyGold
+        public uint PartyGold
         {
             get { return _partyGold; }
             set
@@ -28,7 +28,7 @@ namespace MvpVmSample.Presentation.PartyGoldEditor.Core.ViewModels
             }
         }
 
-        public int NewPartyGold
+        public uint NewPartyGold
         {
             get { return _newPartyGold; }
             set
