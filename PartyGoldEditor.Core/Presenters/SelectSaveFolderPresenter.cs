@@ -29,7 +29,7 @@ namespace MvpVmSample.Presentation.PartyGoldEditor.Core.Presenters
 
             _saveFolderViewModel.SaveFolderPath = _settings["SavePath"].ToString();
 
-            _saveFolderViewModel.Select = new DelegateCommand(Select);
+            _saveFolderViewModel.Select = new DelegateCommand(Select, CanSelect);
             _saveFolderViewModel.Cancel = new DelegateCommand(Cancel);
             _saveFolderViewModel.Browse = new DelegateCommand(Browse);
             _saveFolderViewModel.Search = new DelegateCommand(Search);
@@ -44,6 +44,11 @@ namespace MvpVmSample.Presentation.PartyGoldEditor.Core.Presenters
             _settings.Save();
 
             View.Close();
+        }
+
+        private bool CanSelect()
+        {
+           return !string.IsNullOrEmpty(_saveFolderViewModel.SaveFolderPath);
         }
 
         private void Cancel()

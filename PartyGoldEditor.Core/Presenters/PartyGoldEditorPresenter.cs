@@ -43,29 +43,6 @@ namespace MvpVmSample.Presentation.PartyGoldEditor.Core.Presenters
             CheckSaveFolderSelected();
         }
 
-        private void SetViewMessages()
-        {
-            _goldEditorViewModel.StatusText = _saveListItem == null ? "Please select save game." : "Ready.";
-            _goldEditorViewModel.SelectSaveGameName = _saveListItem == null ? string.Empty : _saveListItem.DisplayText;
-        }
-
-        private void CheckSaveFolderSelected()
-        {
-            if (string.IsNullOrEmpty(_settingsBase["SavePath"].ToString()))
-            {
-                SelectSaveFolder();
-            }
-        }
-
-        private void SetPartyGold()
-        {
-            Header header = _headerRepository.GetHeader(_saveListItem.FullPath);
-
-            _goldEditorViewModel.PartyGold = header.PartyGold;
-
-            SetViewMessages();
-        }
-
         private void SelectSaveFolder()
         {
             ISelectSaveFolderPresenter selectSaveFolderPresenter = _presenterFactory.CreatePresenter<ISelectSaveFolderPresenter>();
@@ -87,12 +64,15 @@ namespace MvpVmSample.Presentation.PartyGoldEditor.Core.Presenters
                 saveCommand.RaiseCanExecuteChanged();
             }
 
-            SetPartyGold();
+            if (_saveListItem != null)
+            {
+                SetPartyGold();
+            }
         }
 
         private void About()
         {
-           
+
         }
 
         private void Save()
@@ -111,6 +91,29 @@ namespace MvpVmSample.Presentation.PartyGoldEditor.Core.Presenters
         private bool CanSave()
         {
             return _saveListItem != null;
+        }
+
+        private void SetViewMessages()
+        {
+            _goldEditorViewModel.StatusText = _saveListItem == null ? "Please select save game." : "Ready.";
+            _goldEditorViewModel.SelectSaveGameName = _saveListItem == null ? string.Empty : _saveListItem.DisplayText;
+        }
+
+        private void CheckSaveFolderSelected()
+        {
+            if (string.IsNullOrEmpty(_settingsBase["SavePath"].ToString()))
+            {
+                SelectSaveFolder();
+            }
+        }
+
+        private void SetPartyGold()
+        {
+            Header header = _headerRepository.GetHeader(_saveListItem.FullPath);
+
+            _goldEditorViewModel.PartyGold = header.PartyGold;
+
+            SetViewMessages();
         }
     }
 }
