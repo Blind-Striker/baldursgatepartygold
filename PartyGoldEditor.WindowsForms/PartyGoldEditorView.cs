@@ -33,6 +33,7 @@ namespace MvpVmSample.Presentation.PartyGoldEditor.WindowsForms
             PartyGoldEditorViewModel partyGoldEditorView = DataContext as PartyGoldEditorViewModel;
 
             toolStrStatus.DataBindings.Add("Text", DataContext, "StatusText");
+            toolStrSelectedSaveGameName.DataBindings.Add("Text", DataContext, "SelectSaveGameName");
 
             _commandAdapter.AddCommandBinding(tsmiSetSaveFolder, partyGoldEditorView.SelectSaveFolder);
             _commandAdapter.AddCommandBinding(tsmiSelectSaveGame, partyGoldEditorView.SelectSaveGame);

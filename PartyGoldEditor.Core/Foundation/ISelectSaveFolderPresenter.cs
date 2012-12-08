@@ -4,5 +4,6 @@ namespace MvpVmSample.Presentation.PartyGoldEditor.Core.Foundation
 {
     public interface ISelectSaveFolderPresenter : IPresenter<ISelectSaveFolderView>
     {
+        string SavePath { get; }
     }
 }

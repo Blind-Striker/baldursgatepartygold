@@ -75,6 +75,9 @@
     <Compile Include="SelectSaveFolderView.xaml.cs">
       <DependentUpon>SelectSaveFolderView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SelectSaveGameView.xaml.cs">
+      <DependentUpon>SelectSaveGameView.xaml</DependentUpon>
+    </Compile>
     <Page Include="PartyGoldEditorView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -91,6 +94,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SelectSaveFolderView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SelectSaveGameView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -166,6 +173,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Images\folder-saved-search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\sword.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

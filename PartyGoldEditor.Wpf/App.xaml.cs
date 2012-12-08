@@ -45,6 +45,7 @@ namespace MvpVmSample.Presentation.PartyGoldEditor.Wpf
 
             _partyGoldEditorContainer.Container.Register(Component.For<IPartyGoldEditorView>().ImplementedBy<PartyGoldEditorView>().LifestyleTransient());
             _partyGoldEditorContainer.Container.Register(Component.For<ISelectSaveFolderView>().ImplementedBy<SelectSaveFolderView>().LifestyleTransient());
+            _partyGoldEditorContainer.Container.Register(Component.For<ISelectSaveGameView>().ImplementedBy<SelectSaveGameView>().LifestyleTransient());
         }
     }
 }

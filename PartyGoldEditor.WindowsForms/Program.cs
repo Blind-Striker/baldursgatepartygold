@@ -36,7 +36,7 @@ namespace MvpVmSample.Presentation.PartyGoldEditor.WindowsForms
             IPartyGoldEditorPresenter partyGoldEditorPresenter = presenterFactory.CreatePresenter<IPartyGoldEditorPresenter>();
 
             Application.Run(partyGoldEditorPresenter.View as Form);
-           //Application.Run(new SelectSaveFolderView());
+           //Application.Run(new SelectSaveGameView());
         }
 
         private static void ConfigureContainer()
@@ -51,6 +51,7 @@ namespace MvpVmSample.Presentation.PartyGoldEditor.WindowsForms
 
             PartyGoldEditorContainer.Container.Register(Component.For<IPartyGoldEditorView>().ImplementedBy<PartyGoldEditorView>().LifestyleTransient());
             PartyGoldEditorContainer.Container.Register(Component.For<ISelectSaveFolderView>().ImplementedBy<SelectSaveFolderView>().LifestyleTransient());
+            PartyGoldEditorContainer.Container.Register(Component.For<ISelectSaveGameView>().ImplementedBy<SelectSaveGameView>().LifestyleTransient());
         }
     }
 }

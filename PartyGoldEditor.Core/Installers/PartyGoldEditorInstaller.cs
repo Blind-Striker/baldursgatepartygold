@@ -28,7 +28,8 @@ namespace MvpVmSample.Presentation.PartyGoldEditor.Core.Installers
                 //Component.For<ITypedFactoryComponentSelector>().ImplementedBy<PartyGoldEditorViewComponentSelector>().LifestyleSingleton()
                 Component.For<IPresenterFactory>().AsFactory().LifestyleTransient(),
                 Component.For<IPartyGoldEditorPresenter>().ImplementedBy<PartyGoldEditorPresenter>().LifestyleTransient(),
-                Component.For<ISelectSaveFolderPresenter>().ImplementedBy<SelectSaveFolderPresenter>().LifestyleTransient()
+                Component.For<ISelectSaveFolderPresenter>().ImplementedBy<SelectSaveFolderPresenter>().LifestyleTransient(),
+                Component.For<ISelectSaveGamePresenter>().ImplementedBy<SelectSaveGamePresenter>().LifestyleTransient()
                 );
         }
     }

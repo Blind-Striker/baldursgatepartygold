@@ -8,6 +8,7 @@ namespace MvpVmSample.Presentation.PartyGoldEditor.Core.ViewModels
         private int _partyGold;
         private int _newPartyGold;
         private string _statusText;
+        private string _selectSaveGameName;
 
         private ICommand _selectSaveFolder;
         private ICommand _selectSaveGame;
@@ -49,6 +50,19 @@ namespace MvpVmSample.Presentation.PartyGoldEditor.Core.ViewModels
                 {
                     _statusText = value;
                     RaisePropertyChanged("StatusText");
+                }
+            }
+        }
+
+        public string SelectSaveGameName
+        {
+            get { return _selectSaveGameName; }
+            set
+            {
+                if (_selectSaveGameName != value)
+                {
+                    _selectSaveGameName = value;
+                    RaisePropertyChanged("SelectSaveGameName");
                 }
             }
         }

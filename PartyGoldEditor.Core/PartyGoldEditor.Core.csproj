@@ -61,21 +61,26 @@
     <Compile Include="Foundation\IPartyGoldEditorPresenter.cs" />
     <Compile Include="Foundation\IPresenter.cs" />
     <Compile Include="Foundation\IPresenteredView.cs" />
+    <Compile Include="Foundation\ISelectSaveGamePresenter.cs" />
     <Compile Include="Foundation\IViewModel.cs" />
     <Compile Include="Foundation\IPresenterFactory.cs" />
     <Compile Include="Foundation\IDialogService.cs" />
+    <Compile Include="Models\SaveListItem.cs" />
     <Compile Include="PartyGoldEditorViewComponentSelector.cs" />
     <Compile Include="Foundation\ISelectSaveFolderPresenter.cs" />
     <Compile Include="Presenters\PartyGoldEditorPresenter.cs" />
     <Compile Include="Presenters\SelectSaveFolderPresenter.cs" />
+    <Compile Include="Presenters\SelectSaveGamePresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Installers\PartyGoldEditorInstaller.cs" />
     <Compile Include="Services\WindowsFormDialogService.cs" />
     <Compile Include="Services\WpfFormDialogService.cs" />
     <Compile Include="ViewModels\PartyGoldEditorViewModel.cs" />
     <Compile Include="ViewModels\SelectSaveFolderViewModel.cs" />
+    <Compile Include="ViewModels\SelectSaveGameViewModel.cs" />
     <Compile Include="Views\IPartyGoldEditorView.cs" />
     <Compile Include="Views\ISelectSaveFolderView.cs" />
+    <Compile Include="Views\ISelectSaveGameView.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -47,6 +47,7 @@ namespace MvpVmSample.Presentation.PartyGoldEditor.WindowsForms
             this.txtNewPartyGold = new System.Windows.Forms.TextBox();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStrStatus = new MvpVmSample.Presentation.PartyGoldEditor.WindowsForms.CustomControls.BindableToolStripStatusLabel();
+            this.toolStrSelectedSaveGameName = new BindableToolStripStatusLabel();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataContext)).BeginInit();
@@ -108,10 +109,11 @@ namespace MvpVmSample.Presentation.PartyGoldEditor.WindowsForms
             // 
             this.toolStrip.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnSave});
+            this.btnSave,
+            this.toolStrSelectedSaveGameName});
             this.toolStrip.Location = new System.Drawing.Point(0, 24);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(35, 25);
+            this.toolStrip.Size = new System.Drawing.Size(66, 25);
             this.toolStrip.TabIndex = 1;
             this.toolStrip.Text = "toolStrip1";
             // 
@@ -182,6 +184,11 @@ namespace MvpVmSample.Presentation.PartyGoldEditor.WindowsForms
             this.toolStrStatus.Name = "toolStrStatus";
             this.toolStrStatus.Size = new System.Drawing.Size(0, 17);
             // 
+            // toolStrSelectedSaveGameName
+            // 
+            this.toolStrSelectedSaveGameName.Name = "tslSelectedSaveGameName";
+            this.toolStrSelectedSaveGameName.Size = new System.Drawing.Size(0, 22);
+            // 
             // PartyGoldEditorView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,6 +234,7 @@ namespace MvpVmSample.Presentation.PartyGoldEditor.WindowsForms
         private System.Windows.Forms.StatusStrip statusStrip;
         private BindableToolStripStatusLabel toolStrStatus;
         private System.Windows.Forms.BindingSource dataContext;
+        private BindableToolStripStatusLabel toolStrSelectedSaveGameName;
     }
 }
 

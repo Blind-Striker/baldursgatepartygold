@@ -19,6 +19,7 @@
         <ToolBarTray DockPanel.Dock="Top">
             <ToolBar>
                 <Button Command="{Binding Save}" Content="{StaticResource SaveImage}"></Button>
+                <Label Content="{Binding SelectSaveGameName}"></Label>
             </ToolBar>
         </ToolBarTray>
         <StatusBar DockPanel.Dock="Bottom">

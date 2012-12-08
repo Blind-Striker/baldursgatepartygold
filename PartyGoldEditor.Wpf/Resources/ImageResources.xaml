@@ -2,9 +2,9 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <BitmapSource x:Key="BaldurImageSource">Images/BGT.ico</BitmapSource>
-    <BitmapSource x:Key="SelectFolderIco">Images/folder-saved-search.ico</BitmapSource>   
-    
-    
+    <BitmapSource x:Key="SelectFolderIco">Images/folder-saved-search.ico</BitmapSource>
+    <BitmapSource x:Key="SelectSaveIco">Images/sword.ico</BitmapSource>
+
     <Image x:Key="SaveImage" x:Shared="False" Source="Images/Save.png" Height="16" Width="16"/>
     <Image x:Key="SettingImage" x:Shared="False" Source="Images/Setting.png" Height="16" Width="16"/>
     <Image x:Key="HelpImage" x:Shared="False" Source="Images/help.png" Height="16" Width="16"/>

@@ -15,6 +15,8 @@ namespace MvpVmSample.Presentation.PartyGoldEditor.Core.Presenters
         private readonly ApplicationSettingsBase _settings;
         private readonly SelectSaveFolderViewModel _saveFolderViewModel;
 
+        public string SavePath { get { return _saveFolderViewModel.SaveFolderPath; } }
+
         //TODO : Wrap ApplicationSettingsBase to another class
         public SelectSaveFolderPresenter(ISelectSaveFolderView view, IDialogService dialogService,IMessageService messageService, ApplicationSettingsBase settings) 
             : base(view)
