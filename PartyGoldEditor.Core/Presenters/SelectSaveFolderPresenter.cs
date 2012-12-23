@@ -64,6 +64,12 @@ namespace MvpVmSample.Presentation.PartyGoldEditor.Core.Presenters
             {
                 _saveFolderViewModel.SaveFolderPath = selectedPath;
             }
+
+            DelegateCommand delegateCommand = _saveFolderViewModel.Select as DelegateCommand;
+            if (delegateCommand != null)
+            {
+                delegateCommand.RaiseCanExecuteChanged();
+            }
         }
 
         private void Search()

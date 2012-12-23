@@ -5,6 +5,7 @@ namespace MvpVmSample.Core.Bootstrapper
     public class BootstrapContainer : BaseContainer
     {
         public BootstrapContainer()
+            : base()
         {
             
         }
